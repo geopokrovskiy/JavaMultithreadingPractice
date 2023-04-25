@@ -28,7 +28,7 @@ public class Main {
             }
         };
 
-        try(ScheduledExecutorService service1 = Executors.newSingleThreadScheduledExecutor()){
+        try(ScheduledExecutorService service1 = Executors.newScheduledThreadPool(3)){
             service1.schedule(thread1, 100, TimeUnit.MILLISECONDS);
             service1.schedule(thread2, 200, TimeUnit.MILLISECONDS);
             service1.schedule(thread3, 300, TimeUnit.MILLISECONDS);
@@ -36,7 +36,7 @@ public class Main {
 
         System.out.println();
 
-        try(ScheduledExecutorService service2 = Executors.newSingleThreadScheduledExecutor()){
+        try(ScheduledExecutorService service2 = Executors.newScheduledThreadPool(3)){
             service2.schedule(thread1, 10, TimeUnit.MILLISECONDS);
             service2.schedule(thread3, 30, TimeUnit.MILLISECONDS);
             service2.schedule(thread2, 20, TimeUnit.MILLISECONDS);
@@ -44,7 +44,7 @@ public class Main {
 
         System.out.println();
 
-        try(ScheduledExecutorService service3 = Executors.newSingleThreadScheduledExecutor()){
+        try(ScheduledExecutorService service3 = Executors.newScheduledThreadPool(3)){
             service3.schedule(thread2, 20, TimeUnit.MILLISECONDS);
             service3.schedule(thread1, 10, TimeUnit.MILLISECONDS);
             service3.schedule(thread3, 30, TimeUnit.MILLISECONDS);
@@ -52,7 +52,7 @@ public class Main {
 
         System.out.println();
 
-        try(ScheduledExecutorService service4 = Executors.newSingleThreadScheduledExecutor()){
+        try(ScheduledExecutorService service4 = Executors.newScheduledThreadPool(3)){
             service4.schedule(thread2, 20, TimeUnit.MILLISECONDS);
             service4.schedule(thread3, 30, TimeUnit.MILLISECONDS);
             service4.schedule(thread1, 10, TimeUnit.MILLISECONDS);
@@ -60,7 +60,7 @@ public class Main {
 
         System.out.println();
 
-        try(ScheduledExecutorService service5 = Executors.newSingleThreadScheduledExecutor()){
+        try(ScheduledExecutorService service5 = Executors.newScheduledThreadPool(3)){
             service5.schedule(thread3, 30, TimeUnit.MILLISECONDS);
             service5.schedule(thread1, 10, TimeUnit.MILLISECONDS);
             service5.schedule(thread2, 20, TimeUnit.MILLISECONDS);
@@ -68,7 +68,7 @@ public class Main {
 
         System.out.println();
 
-        try(ScheduledExecutorService service6 = Executors.newSingleThreadScheduledExecutor()){
+        try(ScheduledExecutorService service6 = Executors.newScheduledThreadPool(3)){
             service6.schedule(thread3, 300, TimeUnit.MILLISECONDS);
             service6.schedule(thread2, 200, TimeUnit.MILLISECONDS);
             service6.schedule(thread1, 100, TimeUnit.MILLISECONDS);
